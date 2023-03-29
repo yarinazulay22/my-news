@@ -1,0 +1,13 @@
+<form class="frame" [formGroup]="form" >
+    <h1>LogIn</h1>
+    <div class="field">
+        <label>User Name:</label> <input type="text" formControlName="userName">
+    </div>
+    <div class="field">
+        <label>Password:</label> <input type="password" formControlName="password">
+    </div>
+    <div class="field">
+        <button (click)="login()">Login</button>
+    </div>
+
+</form> 

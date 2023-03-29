@@ -1,0 +1,20 @@
+<div *ngIf="news">
+  <div class="card" style="width: 18rem;"  >
+    <img src={{news.image}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ news.title }}</h5>
+      <p class="card-text">{{ news.body }} ...</p>
+      <a [routerLink]="['/news', news.id]">
+      Read this News
+    </a>
+    
+    </div>
+      <p class="card-text"><small>author:{{ news.author }}</small></p>
+      <p class="card-text"><small class="text-muted">{{ news.time }}</small></p>
+
+      <button *ngIf="this.utility.user" (click)="update(news.id)" >Edit News</button>
+      <button *ngIf="this.utility.user" (click)="delete(news.id)">X</button>
+
+      <a href="#" class="btn"></a>
+    </div>
+</div>

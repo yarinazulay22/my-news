@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav" >
+            <a *ngFor="let x of menu" class="nav-link" [routerLink]="x.route">{{ x.title }}</a>
+            <a *ngIf="!this.utility.user" class="nav-link" routerLink="login">Login</a>
+            <a *ngIf="!this.utility.user" class="nav-link" routerLink="register">Register</a>
+            <a *ngIf="this.utility.user" class="nav-link" routerLink="add-news">Add News</a>
+            <a *ngIf="this.utility.user" class="nav-link" (click)="logout()">Log Out</a>
+        </div>
+      </div>
+    </div>
+  </nav>

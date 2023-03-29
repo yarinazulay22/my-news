@@ -1,0 +1,11 @@
+<h1>News</h1>
+
+<p *ngIf="!news.length">There is no news to display</p>
+
+<div class="container" className=" row row-cols-1 row-cols-md-2 g-4 " >
+  <div *ngIf="news.length" class="card" style="width: 18rem;" >
+    <app-new-card *ngFor="let n of news" [news]=n></app-new-card>
+  </div>
+</div>
+
+

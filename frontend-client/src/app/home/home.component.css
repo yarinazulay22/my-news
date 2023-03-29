@@ -1,0 +1,16 @@
+.btn{
+    background: rgb(65, 63, 63);
+    color: beige;
+}
+
+.btn:hover {
+    background:rgb(65, 63, 63, 0.8);
+}
+
+.container{
+    display: grid;
+    gap: 20px;
+    flex-direction: row;
+    width: 100vw;
+
+}
